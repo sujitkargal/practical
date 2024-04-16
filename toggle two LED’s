@@ -1,0 +1,45 @@
+Q1.  b. WAP in python/C++ language to toggle two LED’s.
+    c. Write down the observations on Input and Output
+    d. Write down the Result and Conclusion
+
+
+
+#include <Arduino.h>  // Assuming Arduino environment (adjust for other platforms)
+
+// Define LED pin numbers (modify for your hardware)
+const int LED1_PIN = 13;
+const int LED2_PIN = 12;
+
+void setup() {
+  pinMode(LED1_PIN, OUTPUT);
+  pinMode(LED2_PIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED1_PIN, HIGH);
+  digitalWrite(LED2_PIN, LOW);
+  delay(1000);  // Adjust delay between toggles as needed
+
+  digitalWrite(LED1_PIN, LOW);
+  digitalWrite(LED2_PIN, HIGH);
+  delay(1000);
+}
+
+
+
+
+
+Observations on Input and Output (for both languages):
+
+Input: There is no direct user input in these programs. However, you can potentially modify them to accept user input (e.g., from a button press) to control the LED behavior.
+Output:
+The program prints messages to the console indicating which LED is on or off (Python) or uses LED blinking as the output (C++).
+You will observe the LEDs physically turning on and off in an alternating pattern.
+Result and Conclusion:
+
+The provided code successfully controls two LEDs, toggling them on and off in a loop with a defined delay.
+This demonstrates a fundamental concept of microcontroller programming: interfacing with external hardware (LEDs) using GPIO pins.
+You can extend this code by adding:
+User input (e.g., button press) to control LED state manually
+More complex sequences or patterns for the LED blinking
+Integration with sensors or other components for a more interactive project
